@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Syncronous programming
+        let A = prompt("What is your name?");
+        let B = prompt("What is your age?");
+        let C = prompt("What is your favorite colour?");
+        document.write(A + "is" + B + "years old and has " + C + "favorite colour.");
+        //line by line Execute the funciton
+
+        //Asyncronouns
+        console.log("Start")
+        setTimeout(function () {
+            console.log("Hey I am good");
+        }, 3000)
+        console.log("End")
+
+
+
+        //callback function
+        function greet(name) {
+            console.log('Hi' + ' ' + name);
+        }  // we have passed funcion as an argument and that argument inside another funtion that's called..
+        greet('Peter');
+
+
+  
+        //promise
+        const count = True;
+        let countValue = new Promise(function (resolve, reject) {
+            if (count) {
+                resolve("There is a count value.");
+            } else {
+                reject("There is no count value");
+            }
+        });
+        console.log(countValue);
+
+    </script>
+    <!-- Promise Chaining : you have more then one asyncronouns task , one after another .. using 3 method: then,catch,finally-->
+    <script>
+
+        //then()
+        let countvarible = new Promise(function (resolve, reject) {
+            resolve("Promise resolved");
+        });
+        // when promise is resolved successfully
+        countvarible
+            .then(function successValue(result) {
+                console.log(result);
+            })
+            .then(function successValue1() {
+                console.log("You can call multiple functions this way.");
+            });
+
+        //catch()
+        
+        let countValue2 = new Promise(function (resolve, reject) {
+            reject('Promise rejected');
+        });
+        //if occure error
+        countValue2.then(
+            function successValue(result) {
+                console.log(result);
+            },
+        )
+            .catch(
+                function errorValue(result) {
+                    console.log(result);
+                }
+            );
+
+     // high order function
+     function add(a,b){
+        return a + b; 
+     }  // function that takes as an argument
+     console.log(add(2,4));     
+    </script>
+</body>
+
+</html>
++

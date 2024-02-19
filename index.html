@@ -1,0 +1,313 @@
+JS Variable
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let x = 5;
+        let y = 6;
+        let z = x + y;
+        document.getElementById("demo").innerHTML =
+            " z : " + z;
+    </script>
+    <p id="class"></p>
+    <script>
+        var P = 5;
+        var R = 6;
+        var Q = P + R;
+        document.getElementById("class").innerHTML =
+            " z : " + Q;
+    </script>
+    <script>
+        let a = 5;
+        let b = 3;
+
+        // addition
+        console.log('x + y = ', a + b);
+
+        // subtraction
+        console.log('x - y = ', a - b);
+
+        // multiplication
+        console.log('x * y = ', a * b);
+
+        // division
+        console.log('x / y = ', a / b);
+
+        // remainder -->
+        console.log('x % y = ', a % b);
+
+        // increment
+        console.log('++x = ', ++a);
+        console.log('x++ = ', a++);
+        console.log('x = ', a);
+
+        // decrement
+        console.log('--x = ', --a);
+        console.log('x-- = ', a--);
+        console.log('x = ', a);
+
+        //exponentiation
+        console.log('x ** y =', a ** b);
+    </script>
+    <script>
+        // logical AND
+        console.log(true && true);
+        console.log(true && false);
+
+        // logical OR
+        console.log(true || false);
+
+        // logical NOT
+        console.log(!true);
+    </script>
+    <script>
+        //strings example
+        const name = 'ram';
+        const name1 = "hari";
+        const result = `The names are ${name} and ${name1}`;
+
+        //number example
+        const number1 = 3 / 0;
+        console.log(number1);
+        const number2 = -3 / 0;
+        console.log(number2);
+        const number3 = "abc" / 3;
+        console.log(number3);
+
+        //boolean
+        const dataChecked = true;
+        const valueCounted = false;
+
+    </script>
+
+
+    <script>
+        //for loop
+        const n = 5;
+        for (let i = 1; i <= n; i++) {
+            console.log(`I love JavaScript.`);
+        }
+
+        // while loop 
+
+        let i = 1, m = 5;
+        while (i <= m) {
+            console.log(i);
+            i += 1;
+        }
+        // Do while loop
+        let p = 1;
+        const s = 5;
+        do {
+            console.log(p);
+            i++;
+        } while (p <= n);
+
+        // If element
+        const number = prompt("Enter a number: ");
+        if (number > 0) {
+            console.log("The number is positive");
+        }
+        console.log("The if statement is easy");
+
+        //If ...else element
+        const value = prompt("Enter a number: ");
+        if (value > 0) {
+            console.log("The value is positive");
+        }
+        else {
+            console.log("The value is either a negative value or 0");
+        }
+        console.log("The if...else statement is easy");
+
+        //break 
+        for (let i = 1; i <= 5; i++) {
+            if (i == 3) {
+                break;
+            }
+            console.log(i);
+        }
+
+        //continue
+        for (let i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+            }
+            console.log(i);
+        } 
+    </script>
+
+    <script>
+
+
+
+       // switch case
+             var day = 3;
+
+            switch (day) {
+                case 0:
+                    document.write("Today is Monday");
+                    break;
+                case 1:
+                    document.write("Today is Tuesday");
+                    break;
+                case 2:
+                    document.write("Today is Wednesday");
+                    break;
+                case 3:
+                    document.write("Today is Thursday");
+                    break;
+                case 4:
+                    document.write("Today is Friday");
+                    break;
+                case 5:
+                    document.write("Today is Saturday");
+                    break;
+                case 6:
+                    document.write("Today is Sunday");
+                    break;
+                default:
+                    document.write("Enter the valid week Day");
+            }
+
+            var age = 15;
+            switch (true) {
+                case (age >= 15 && a <= 20):
+                    document.write("you are Eligible");
+                    break;
+                case (age >= 21 && a <= 30):
+                    document.write("you are not Eligible");
+                    break;
+                default:
+                    document.write("Enter the valid Age");
+            }
+        </script>
+
+     <!-- make a Calculator -->
+
+    <script>
+            var num1 = prompt("enter 1st num");
+            var num2 = prompt("enter 2nd num");
+            var opr = prompt("enter arthmatic Operator");
+            switch (opr) {
+                case "+":
+                    document.write(num1 + num2);
+                    break;
+                case "-":
+                    document.write(num1 + num2);
+                    break;
+                case "*":
+                    document.write(num1 + num2);
+                    break;
+                case "/":
+                    document.write(num1 + num2);
+                    break;
+                case "/":
+                    document.write(num1 + num2);
+                    break;
+                default:
+                    document.write("please Enter Again");
+            }
+    </script>
+
+    <script>
+        // map, filture,reduce
+        let arr = [45, 23, 21] // map is a create new array
+        let r = arr.map((value) => {
+            console.log(value)
+            return value + 1
+
+        }) // array return
+        console.log(r)
+
+        //filter
+        let arr2 = [45, 23, 21, 0, 3, 5]
+        let a2 = arr2.filter((value) => {
+            return value < 10
+        }) // array return 
+        console.log(a2)
+
+        //reduce
+        let arr3 = [1, 2, 3, 5, 3, 2, 1]
+        newarr3 = arr3.reduce((h1, h2) => {
+            return h1 + h2
+        })
+        console.log(newarr3)
+        // reduce r use to 1+2 = 3+3 = 6+5 = 11 value return
+    </script>
+
+
+    <!--ARRAY METHOD-->
+    <script>
+
+        //To String
+        let num = [1, 2, 3, 34, 4]  // array convert to string
+        let B = num.toString()
+        console.log(B)
+        // join()
+        let C = num.join("_") // array element to join and using sepreter
+        console.log(C)
+        //pop()
+        let R = num.pop()  // pop remove last element(4-popped) ..pop returns the popped element
+        console.log(R)
+
+        //push()
+        let dailyActivities = ['eat', 'sleep'];
+        dailyActivities.push('exercise'); // push return the new array length
+        console.log(dailyActivities);
+
+        //shift()
+        dailyActivities.shift('eat'); // remove first element
+        console.log(dailyActivities);
+
+        //unshift()
+        dailyActivities.unshift('work');
+        console.log(dailyActivities); // add new element to first position
+
+        //cocat()
+        let NUM = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let NUM_more = [11, 12, 13, 14, 15, 16, 17, 18, 19]
+        let newarray = num.concat(NUM_more) // marge the array 
+        console.log(newarray)
+
+        //sort()
+        let Num = [551, 22, 13, 3, 4, 6, 16, 78, 89]
+        Num.sort()  //sorting the original array
+        console.log(Num)
+        //ascending order
+        let compare = (a, b) => {  // campare to value 
+            return b - a
+        }
+        Num.sort(compare)
+        console.log(Num)
+        //revers
+        Num.reverse()
+        console.log(Num)
+        //Splice 
+        Num.splice(2, 3, 1021, 1031, 1024, 1026) // position,no. of remove element and add element
+        console.log(Num) // returns deleted items and modifies the array 
+        //slice
+        let newNum = Num.slice(3)
+        console.log(newNum)
+
+        //delete ( operator)
+        let variable = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        console.log(variable.length)
+        delete variable[0]
+        console.log(variable.length)
+
+
+    </script>
+
+
+</body>
+
+</html>
